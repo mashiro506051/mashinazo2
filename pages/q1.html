@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>問題1 | まし謎2026</title>
+
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/q1.css">
+</head>
+<body class="game-page">
+
+  <button class="home-back-button" onclick="location.href='../home.html'">
+    ホームへ戻る
+  </button>
+
+  <div class="container">
+    <p class="question-label">問題 1</p>
+    <p id="message">法則を導き出し、正しい順でボタンを押せ！</p>
+
+    <div class="button-row">
+      <button class="game-button blue" onclick="playerMove(0)"></button>
+      <button class="game-button blue" onclick="playerMove(1)"></button>
+      <button class="game-button blue" onclick="playerMove(2)"></button>
+
+      <button class="game-button red" onclick="playerMove(3)"></button>
+      <button class="game-button red" onclick="playerMove(4)"></button>
+      <button class="game-button red" onclick="playerMove(5)"></button>
+
+      <button class="game-button yellow" onclick="playerMove(6)"></button>
+      <button class="game-button yellow" onclick="playerMove(7)"></button>
+      <button class="game-button yellow" onclick="playerMove(8)"></button>
+    </div>
+
+    <div id="answerArea">
+
+      <input
+        id="answer"
+        type="text"
+        placeholder="答えを入力"
+      >
+
+      <button
+        id="submitButton"
+        onclick="checkAnswer()"
+      >
+        回答
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/q1.js"></script>
+
+</body>
+</html>

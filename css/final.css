@@ -1,0 +1,152 @@
+```css
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.final-page {
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  box-sizing: border-box;
+
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(250,204,21,.15), transparent 25%),
+    radial-gradient(circle at 80% 10%, rgba(96,165,250,.15), transparent 30%),
+    linear-gradient(135deg,#020617,#172554 55%,#1e1b4b);
+
+  overflow-x: hidden;
+}
+
+.final-container {
+  width: min(900px, 92vw);
+
+  margin: 0 auto;
+  padding: 40px;
+
+  text-align: center;
+
+  border-radius: 32px;
+
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.18);
+
+  backdrop-filter: blur(12px);
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 0 55px rgba(99,102,241,.22),
+    inset 0 0 30px rgba(255,255,255,.03);
+}
+
+.final-title {
+  margin: 0 0 24px;
+
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  letter-spacing: .15em;
+
+  color: #facc15;
+
+  text-shadow:
+    0 0 12px rgba(250,204,21,.8),
+    0 0 30px rgba(250,204,21,.35);
+}
+
+.final-question {
+  margin: 0 0 35px;
+
+  color: #ffffff;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  letter-spacing: .05em;
+}
+
+.final-message {
+  margin: 40px 0;
+
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: bold;
+
+  color: #facc15;
+
+  line-height: 1.8;
+  letter-spacing: .08em;
+
+  text-shadow:
+    0 0 12px rgba(250,204,21,.7),
+    0 0 25px rgba(250,204,21,.3);
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+}
+
+.home-button {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  color: #111827;
+
+  background:
+    linear-gradient(
+      135deg,
+      #facc15,
+      #f97316
+    );
+
+  box-shadow:
+    0 0 22px rgba(250,204,21,.35);
+
+  transition: .25s;
+}
+
+.home-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 35px rgba(250,204,21,.65);
+}
+
+.home-button:active {
+  transform: scale(.97);
+}
+
+@media (max-width: 768px) {
+
+  .final-page {
+    padding: 24px 0;
+  }
+
+  .final-container {
+    padding: 28px 20px;
+  }
+
+  .final-question {
+    font-size: 1rem;
+  }
+
+  .final-message {
+    font-size: 1.4rem;
+  }
+
+}

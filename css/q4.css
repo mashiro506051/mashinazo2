@@ -1,0 +1,229 @@
+.q4-page {
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100vw;
+  box-sizing: border-box;
+
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(250,204,21,.15), transparent 25%),
+    radial-gradient(circle at 80% 10%, rgba(96,165,250,.15), transparent 30%),
+    linear-gradient(135deg,#020617,#172554 55%,#1e1b4b);
+
+  overflow-x: hidden;
+}
+
+.q4-container {
+  width: min(650px, 92vw);
+  margin: 0 auto;
+  padding: 36px 28px;
+
+  text-align: center;
+  box-sizing: border-box;
+
+  border-radius: 32px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 55px rgba(99,102,241,.22),
+    inset 0 0 30px rgba(255,255,255,.03);
+}
+
+.q4-title {
+  margin: 0 0 14px;
+
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  letter-spacing: .15em;
+
+  color: #facc15;
+
+  text-shadow:
+    0 0 12px rgba(250,204,21,.8),
+    0 0 30px rgba(250,204,21,.35);
+}
+
+.q4-question {
+  margin: 0 0 22px;
+
+  color: #ffffff;
+
+  font-size: 1.15rem;
+  font-weight: bold;
+
+  letter-spacing: .05em;
+}
+
+.q4-image-wrapper {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 12px;
+}
+
+.q4-image {
+  width: min(280px, 65vw);
+  height: auto;
+
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 25px rgba(250,204,21,.15),
+    0 0 45px rgba(99,102,241,.15);
+}
+
+.q4-note {
+  display: flex;
+  justify-content: center;
+
+  margin: 10px 0 22px;
+}
+
+.q4-note-image {
+  width: 120px;
+  height: auto;
+
+  display: block;
+
+  transform: rotate(-4deg);
+}
+
+.mission-text {
+  margin: 0 0 28px;
+
+  text-align: center;
+
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: bold;
+
+  color: #facc15;
+
+  letter-spacing: .08em;
+
+  text-shadow:
+    0 0 12px rgba(250,204,21,.7),
+    0 0 28px rgba(250,204,21,.35);
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+}
+
+.home-button {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  color: #111827;
+
+  background:
+    linear-gradient(135deg, #facc15, #f97316);
+
+  box-shadow:
+    0 0 22px rgba(250,204,21,.35);
+
+  transition: .25s;
+}
+
+.home-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 35px rgba(250,204,21,.65);
+}
+
+@media (max-width: 768px) {
+  .q4-page {
+    padding: 24px 0;
+  }
+
+  .q4-container {
+    padding: 28px 20px;
+  }
+
+  .q4-image {
+    width: min(240px, 70vw);
+  }
+
+  .q4-note-image {
+    width: 100px;
+  }
+
+  .q4-question {
+    font-size: 1rem;
+  }
+}
+
+
+/* ===== 問題4 回答フォーム ===== */
+
+.answer-area {
+    width: 100%;
+    max-width: 420px;
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.answer-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 4px;
+    border: 2px solid #c5a45b;
+    border-radius: 12px;
+    background: #fff;
+    color: #333;
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: #94712b;
+    box-shadow: 0 0 8px rgba(197,164,91,0.3);
+}
+
+.answer-button {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    background: #94712b;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.answer-button:hover {
+    background: #75591e;
+    transform: translateY(-2px);
+}
+
+.result-message {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 24px;
+}

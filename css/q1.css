@@ -1,0 +1,233 @@
+.game-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at 50% 35%, rgba(37,99,235,.18), transparent 28%),
+    radial-gradient(circle at 75% 65%, rgba(250,204,21,.12), transparent 26%),
+    linear-gradient(135deg, #020617, #111827, #020617);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.game-page::before {
+  content: "♞";
+  position: absolute;
+  left: 6%;
+  bottom: 8%;
+  font-size: 180px;
+  color: rgba(255,255,255,.04);
+  transform: rotate(-16deg);
+}
+
+.container {
+  width: min(980px, 92vw);
+  text-align: center;
+  padding: 55px 45px;
+  border-radius: 34px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 0 55px rgba(37,99,235,.25),
+    inset 0 0 30px rgba(255,255,255,.03);
+  position: relative;
+  z-index: 2;
+}
+
+.question-label {
+  color: #facc15;
+  letter-spacing: .35em;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+#message {
+  margin-bottom: 38px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  text-shadow: 0 0 18px rgba(255,255,255,.25);
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(9, 74px);
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 38px;
+}
+
+.game-button {
+  width: 74px;
+  height: 74px;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: .22s;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.35),
+    inset 0 0 18px rgba(255,255,255,.18);
+}
+
+.game-button:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow:
+    0 0 28px rgba(255,255,255,.25),
+    inset 0 0 18px rgba(255,255,255,.22);
+}
+
+.blue {
+  background:
+    linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.red {
+  background:
+    linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.yellow {
+  background:
+    linear-gradient(135deg, #facc15, #eab308);
+}
+
+.player {
+  outline: 4px solid #facc15;
+  box-shadow:
+    0 0 30px #facc15,
+    inset 0 0 18px rgba(255,255,255,.25);
+}
+
+.computer {
+  outline: 4px solid #facc15;
+  box-shadow:
+    0 0 30px #facc15,
+    inset 0 0 18px rgba(255,255,255,.25);
+}
+
+.disabled {
+  opacity: .45;
+  pointer-events: none;
+}
+
+#answerArea {
+  display: none;
+  margin-top: 30px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,.18);
+}
+
+#answerArea p {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+#answer {
+  padding: 14px 18px;
+  width: 280px;
+  font-size: 18px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  text-align: center;
+}
+
+#submitButton {
+  padding: 14px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background:
+    linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  box-shadow:
+    0 0 20px rgba(34,197,94,.45);
+  transition: .2s;
+}
+
+#submitButton:hover {
+  transform: scale(1.05);
+}
+
+#hint {
+  margin-top: 16px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* ホームへ戻るボタン：中央下 */
+.home-back-button {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+  height: 64px;
+  padding: 0 32px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  z-index: 5;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+
+  transition: all .25s ease;
+}
+
+.home-back-button:hover {
+  transform: translateX(-50%) translateY(-3px);
+  background: rgba(255,255,255,0.12);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.35),
+    0 0 20px rgba(96,165,250,.25);
+}
+
+.home-back-button:active {
+  transform: translateX(-50%) scale(.98);
+}
+
+@media (max-width: 900px) {
+  .button-row {
+    grid-template-columns: repeat(3, 74px);
+  }
+
+  #message {
+    font-size: 22px;
+  }
+
+  .container {
+    padding: 40px 24px;
+  }
+
+  .home-back-button {
+    bottom: 20px;
+    min-width: 160px;
+    height: 56px;
+    font-size: 1rem;
+  }
+}

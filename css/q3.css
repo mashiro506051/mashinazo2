@@ -1,0 +1,150 @@
+.q3-page {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, .16), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(251, 191, 36, .14), transparent 30%),
+    linear-gradient(135deg, #020617, #0f172a 55%, #1e293b);
+
+  color: #f8fafc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.q3-container {
+  width: min(1000px, 92vw);
+
+  padding: 48px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .18);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 0 50px rgba(56, 189, 248, .25);
+
+  text-align: center;
+}
+
+.q3-title {
+  font-size: 2.4rem;
+  letter-spacing: .16em;
+  margin-bottom: 36px;
+}
+
+.image-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.image-card {
+  width: 300px;
+  padding: 18px;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, .92);
+
+  box-shadow: 0 16px 35px rgba(0, 0, 0, .28);
+}
+
+.image-card img {
+  width: 100%;
+  display: block;
+
+  border-radius: 18px;
+}
+
+.instruction {
+  font-size: 2rem;
+  font-weight: bold;
+
+  color: #fde68a;
+
+  text-shadow:
+    0 0 16px rgba(251, 191, 36, .5);
+}
+
+/* =========================
+   Footer
+========================= */
+
+.page-footer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* =========================
+   Home Button
+========================= */
+
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+  height: 64px;
+
+  padding: 0 32px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.20);
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.25),
+    inset 0 1px 0 rgba(255,255,255,.15);
+
+  transition: all .25s ease;
+}
+
+.home-btn:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255,255,255,.12);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.35),
+    0 0 20px rgba(96,165,250,.25);
+}
+
+@media (max-width: 768px) {
+
+  .q3-container {
+    padding: 30px 20px;
+  }
+
+  .image-card {
+    width: 240px;
+  }
+
+  .instruction {
+    font-size: 1.6rem;
+  }
+
+  .home-btn {
+    min-width: 160px;
+    height: 56px;
+    font-size: 1rem;
+  }
+}

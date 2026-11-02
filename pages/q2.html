@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>問題2 | まし謎2026</title>
+
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/q2.css">
+</head>
+
+<body class="piano-page">
+
+  <div class="piano-container">
+
+<p class="question-label">
+  問題 2
+</p>
+
+<p id="message">
+ 数字が書かれた鍵盤を用いて曲を推測し演奏せよ！ただし、数字は入力可能回数である。
+</p>
+
+<div class="piano">
+
+  <!-- E5 -->
+  <button
+    class="key white"
+    data-note="E5"
+    onclick="playKey('E5')">
+
+    <span class="count">3</span>
+
+    <small>
+      E5<br>
+      ミ
+    </small>
+
+  </button>
+
+  <!-- F5 -->
+  <button
+    class="key white"
+    data-note="F5"
+    onclick="playKey('F5')">
+
+    <span class="count">1</span>
+
+    <small>
+      F5<br>
+      ファ
+    </small>
+
+  </button>
+
+  <!-- F#5 -->
+  <button
+    class="key black"
+    data-note="FS5"
+    onclick="playKey('FS5')">
+
+    <span class="count">2</span>
+
+    <small>F#</small>
+
+  </button>
+
+  <!-- G5 -->
+  <button
+    class="key white"
+    data-note="G5"
+    onclick="playKey('G5')">
+
+    <span class="count">3</span>
+
+    <small>
+      G5<br>
+      ソ
+    </small>
+
+  </button>
+
+  <!-- G#5 -->
+  <button
+    class="key black"
+    data-note="GS5"
+    onclick="playKey('GS5')">
+
+    <span class="count"></span>
+
+    <small>G#</small>
+
+  </button>
+
+  <!-- A5 -->
+  <button
+    class="key white"
+    data-note="A5"
+    onclick="playKey('A5')">
+
+    <span class="count">3</span>
+
+    <small>
+      A5<br>
+      ラ
+    </small>
+
+  </button>
+
+  <!-- A#5 -->
+  <button
+    class="key black"
+    data-note="AS5"
+    onclick="playKey('AS5')">
+
+    <span class="count"></span>
+
+    <small>A#</small>
+
+  </button>
+
+  <!-- B5 -->
+  <button
+    class="key white"
+    data-note="B5"
+    onclick="playKey('B5')">
+
+    <span class="count">1</span>
+
+    <small>
+      B5<br>
+      シ
+    </small>
+
+  </button>
+
+  <!-- C6 -->
+  <button
+    class="key white"
+    data-note="C6"
+    onclick="playKey('C6')">
+
+    <span class="count">1</span>
+
+    <small>
+      C6<br>
+      ド
+    </small>
+
+  </button>
+
+  <!-- C#6 -->
+  <button
+    class="key black"
+    data-note="CS6"
+    onclick="playKey('CS6')">
+
+    <span class="count"></span>
+
+    <small>C#</small>
+
+  </button>
+
+  <!-- D6 -->
+  <button
+    class="key white"
+    data-note="D6"
+    onclick="playKey('D6')">
+
+    <span class="count"></span>
+
+    <small>
+      D6<br>
+      レ
+    </small>
+
+  </button>
+
+  <!-- D#6 -->
+  <button
+    class="key black"
+    data-note="DS6"
+    onclick="playKey('DS6')">
+
+    <span class="count"></span>
+
+    <small>D#</small>
+
+  </button>
+
+  <!-- E6 -->
+  <button
+    class="key white"
+    data-note="E6"
+    onclick="playKey('E6')">
+
+    <span class="count">1</span>
+
+    <small>
+      E6<br>
+      高いミ
+    </small>
+
+  </button>
+
+</div>
+
+<div id="answerArea">
+
+  <p>
+    これは何のアニメの曲ですか？
+  </p>
+
+  <input
+    id="answer"
+    type="text"
+    placeholder="答えを入力">
+
+  <button onclick="checkAnswer()">
+    回答
+  </button>
+
+</div>
+
+<footer class="page-footer">
+  <a href="../home.html" class="home-btn">
+    ホームへ戻る
+  </a>
+</footer>
+
+  </div>
+
+  <script src="../js/q2.js"></script>
+
+</body>
+</html>

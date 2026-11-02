@@ -1,0 +1,245 @@
+.clear-page {
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 50px 20px;
+
+  background:
+    radial-gradient(circle at 20% 20%,
+      rgba(250,204,21,.12),
+      transparent 30%),
+
+    radial-gradient(circle at 80% 10%,
+      rgba(96,165,250,.12),
+      transparent 30%),
+
+    linear-gradient(
+      135deg,
+      #020617,
+      #0f172a 50%,
+      #1e1b4b
+    );
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.clear-card {
+
+  width: min(850px, 92vw);
+
+  margin: auto;
+
+  padding: 60px;
+
+  text-align: center;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border: 1px solid
+    rgba(255,255,255,.15);
+
+  border-radius: 32px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 60px rgba(99,102,241,.25);
+
+  position: relative;
+}
+
+.horseshoe {
+
+  font-size: 3rem;
+
+  color: #facc15;
+
+  margin-bottom: 20px;
+
+  text-shadow:
+    0 0 15px rgba(250,204,21,.6);
+}
+
+.clear-title {
+
+  margin: 0;
+
+  font-size: 4rem;
+  font-weight: 800;
+
+  color: #facc15;
+
+  text-shadow:
+    0 0 20px rgba(250,204,21,.6);
+}
+
+.clear-subtitle {
+
+  margin-top: 20px;
+
+  font-size: 1.3rem;
+
+  color:
+    rgba(255,255,255,.9);
+}
+
+.divider {
+
+  width: 220px;
+  height: 2px;
+
+  margin: 30px auto;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      #facc15,
+      transparent
+    );
+}
+
+.destination-label {
+
+  color: #facc15;
+
+  letter-spacing: .35em;
+
+  font-size: .95rem;
+
+  margin-bottom: 15px;
+}
+
+.destination-name {
+
+  margin: 0;
+
+  font-size: 4rem;
+
+  color: #60a5fa;
+
+  text-shadow:
+    0 0 25px rgba(96,165,250,.8);
+}
+
+.horse-silhouette {
+
+  margin-top: 30px;
+
+  font-size: 5rem;
+
+  animation:
+    horseFloat 3s ease-in-out infinite;
+}
+
+.clear-message {
+
+  margin-top: 30px;
+
+  font-size: 1.3rem;
+
+  line-height: 2;
+
+  color:
+    rgba(255,255,255,.95);
+}
+
+.clear-home-button {
+
+  margin-top: 40px;
+
+  padding:
+    18px 45px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  color: white;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #4f46e5
+    );
+
+  box-shadow:
+    0 10px 30px rgba(99,102,241,.35);
+
+  transition:
+    transform .25s,
+    box-shadow .25s;
+}
+
+.clear-home-button:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(99,102,241,.45);
+}
+
+.clear-home-button:active {
+
+  transform:
+    translateY(0);
+}
+
+@keyframes horseFloat {
+
+  0% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-10px);
+  }
+
+  100% {
+    transform:
+      translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .clear-card {
+
+    padding: 40px 25px;
+  }
+
+  .clear-title {
+
+    font-size: 2.6rem;
+  }
+
+  .destination-name {
+
+    font-size: 2.6rem;
+  }
+
+  .horse-silhouette {
+
+    font-size: 4rem;
+  }
+
+  .clear-message {
+
+    font-size: 1.05rem;
+  }
+}

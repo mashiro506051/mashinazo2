@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>問題4 | まし謎 in 大阪</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/q4.css">
+</head>
+
+<body class="q4-page">
+
+    <main class="q4-container">
+
+        <h1 class="q4-title">
+            問題4
+        </h1>
+
+        <p class="q4-question">
+            「はじまりの紙」を見て、<br>
+            4文字の英単語を推測せよ。
+        </p>
+
+        <!-- 回答入力 -->
+        <div class="answer-area">
+
+            <input
+                type="text"
+                id="answer"
+                class="answer-input"
+                placeholder="英語4文字で入力"
+                maxlength="4"
+                autocomplete="off"
+                spellcheck="false"
+            >
+
+            <button
+                type="button"
+                class="answer-button"
+                onclick="checkAnswer()">
+                回答する
+            </button>
+
+            <p id="result-message"
+               class="result-message"
+               aria-live="polite"></p>
+
+        </div>
+
+        <!-- ホームボタン -->
+        <div class="button-area">
+            <a href="../home.html" class="home-button">
+                ホームへ戻る
+            </a>
+        </div>
+
+    </main>
+
+    <script>
+        function checkAnswer() {
+
+            const answer = document
+                .getElementById("answer")
+                .value.trim().toUpperCase();
+
+            const message = document
+                .getElementById("result-message");
+
+            if (answer === "STOP") {
+
+                // 正解したらクリア画面へ移動
+                window.location.href = "q4-clear.html";
+
+            } else {
+
+                message.textContent =
+                    "不正解！もう一度考えてみよう。";
+
+                message.style.color = "#d9534f";
+
+            }
+        }
+
+        // Enterキーでも回答可能
+        document.getElementById("answer")
+            .addEventListener("keydown", function(event) {
+
+                if (event.key === "Enter") {
+                    checkAnswer();
+                }
+
+            });
+    </script>
+
+</body>
+</html>
